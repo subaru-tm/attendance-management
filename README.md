@@ -15,6 +15,7 @@
   - composer require laravel/ui // メール認証のためlaravel/uiをインストール
     - php artisan ui bootstrap --auth
   - composer require --dev laravel/dusk // laravel duskのインストール
+  - php artisan storage:link // シンボリックリンク作成(viewヘッダ画像等のため)
 
 ## 開発環境
 -  : http://localhost/
