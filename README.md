@@ -29,3 +29,7 @@
 - laravel/fortify 1.19
 - laravel/ui 3.4
 - laravel/dusk 6.25
+
+## ER図
+![image](https://github.com/user-attachments/assets/d88c1b1b-85cb-4845-b2ff-86bbd670c7fb)
+
