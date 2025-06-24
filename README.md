@@ -9,10 +9,22 @@
   - doker-compose exec php bash
   - composer install
   - cp .env.example .env  // 環境変数を設定
-  - 
-- laravel duskのインストール
-  - composer require --dev laravel/dusk
+  - php artisan key:generate
+  - composer require laravel/fortify // fortifyインストール
+    - php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
+  - composer require laravel/ui // メール認証のためlaravel/uiをインストール
+    - php artisan ui bootstrap --auth
+  - composer require --dev laravel/dusk // laravel duskのインストール
 
-## 使用技術
+## 開発環境
+-  : http://localhost/
+
+
+## 使用技術(実行環境)
+- PHP 7.4.9
 - Laravel Framework 8.83.8
+- MySQL 8.0.26
+- nginx 1.21.1
+- laravel/fortify 1.19
+- laravel/ui 3.4
 - laravel/dusk 6.25
