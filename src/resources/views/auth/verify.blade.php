@@ -7,6 +7,7 @@
     <title>COACHTECH ATTENDANCE MANAGEMENT</title>
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
     <link rel="stylesheet" href="{{ asset('css/common.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/verify.css') }}">
     @yield('css')
 
     <!-- CSRF Token -->
@@ -46,9 +47,8 @@
                             @endif
 
                             {{ __('メール認証を完了してください。') }}
-                            <?php dd(route('emailVerificationRoute')); ?>
 
-                            <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
+                            <form class="d-inline" method="POST" action="{{ route('verification.send') }}">
                                 @csrf
                                 <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('認証メールを再送する') }}</button>.
                             </form>

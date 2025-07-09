@@ -79,6 +79,8 @@ class LoginController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
+            $user = Auth::user();
+            session(['unauthenticated_user'=>$user]);
             return redirect()->intended(route('attendance'));
         } else {
             // ユーザー情報がDBにない場合ログインできない。

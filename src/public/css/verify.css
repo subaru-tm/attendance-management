@@ -1,0 +1,30 @@
+@media screen and (max-width: 1540px) {
+    main {
+        width: 1515px;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    main {
+        width: 840px;
+        height: 100%;
+    }
+}
+
+.card {
+    margin: 200px auto;
+    text-align: center;
+    width: 720px;
+    font-size: 24px;
+}
+
+.d-inline button {
+    width: 257px;
+    height: 53px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #0073CC;
+    cursor: pointer;
+}

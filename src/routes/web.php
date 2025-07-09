@@ -63,12 +63,12 @@ Route::middleware('admin')->group(function () {
   Route::get('/admin/attendance/list', [AdminController::class, 'index'])->name('admin.list');
 });
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/stamp_correction_request/list:{tab}', [ApplicationController::class, 'list'])->name('correction.list');
     Route::post('/attendance/{id}/correct_request', [ApplicationController::class, 'application'])->name('application');
     Route::get('/attendance/list', [AttendanceListController::class, 'list'])->name('attendance.list');
     Route::get('/attendance/{id}', [AttendanceController::class, 'detail'])->name('attendance.detail');
-    Route::get('/attendance', [AttendanceController::class, 'today'])->name('attendance')->middleware( 'verified');
+    Route::get('/attendance', [AttendanceController::class, 'today'])->name('attendance');
     Route::post('/attendance', [AttendanceController::class, 'store'])->name('attendance.store');
     Route::patch('/attendance', [AttendanceController::class, 'update'])->name('attendance.update');
       // ↓↓ログアウト後リダイレクト用。結果としてログアウト後はログイン画面に遷移。（４０４エラー回避のため）

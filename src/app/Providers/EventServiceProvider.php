@@ -27,9 +27,9 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Event::listen(
-            Registered::class,
-            [SendEmailVerificationNotification::class, 'handle']
-        );
+//        Event::listen(
+//            Registered::class,
+//            [SendEmailVerificationNotification::class, 'handle']
+//        );
     }
 }
