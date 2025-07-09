@@ -1,0 +1,81 @@
+.card {
+    margin: 200px auto;
+    @media (max-width: 1540px) {
+        margin: 150px auto;
+    }
+    @media (max-width: 850px) {
+        margin: 100px auto;
+    }
+    width: 60%;
+    text-align: center;
+    font-weight: 700;
+}
+
+.card-header {
+    margin: 0 auto;
+    padding: 6px;
+    width: 100px;
+    height: 40px;
+    background: #C8C8C8;
+    font-size: 18px;
+    color: #696969;
+    border-radius: 20px;
+}
+
+
+.card-body__date {
+    margin-top: 24px;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.card-body__time {
+    margin-top: 24px;
+    font-size: 80px;
+}
+
+.card-body__button {
+}
+
+.attendancing__button-area {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.attendancing__button-area button {
+    margin-top: 80px;
+    width: 221px;
+    height: 77px;
+    border-radius: 20px;
+    font-size: 32px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.leave_button {
+    color: #FFFFFF;
+    background: #000000;
+}
+
+.break_button {
+    color: #000000;
+    background: #FFFFFF;
+    border: none;
+}
+
+.attendance_button {
+    margin-top: 80px;
+    width: 221px;
+    height: 77px;
+    border-radius: 20px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background: #000000;
+}
+
+.leaved_status_message {
+    margin-top: 90px;
+    font-size: 26px;
+}

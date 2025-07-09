@@ -1,0 +1,128 @@
+.card {
+    margin: 80px auto;
+
+    width: 60%;
+
+    @media (max-width: 850px) {
+        width: 100%;
+    }
+
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+}
+
+.card-header {
+    padding: 0 16px;
+    height: 44px;
+    border-left: 8px solid #000000;
+    color: #000000;
+    vertical-align: middle;
+}
+
+.card-header h1 {
+    font-size: 30px;
+}
+
+.detail-table {
+    margin-top: 46px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.detail-table__inner {
+    width: 100%;
+}
+
+.detail-table__row {
+    display: flex;
+    height: 92px;
+    border-bottom: 2px solid #E1E1E1;
+    align-items: center;
+}
+
+.detail-table__header {
+    width: 280px;
+    padding-left: 64px;
+    @media (max-width: 850px) {
+        width: 92px;
+        padding-left: 8px;
+    }
+    text-align: left;
+    color: #737373;
+}
+
+.detail-table__item {
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 167px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.detail-table__item input {
+    width: 103px;
+    height: 28px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+}
+
+.detail-table__dash {
+    width: 16px;
+}
+
+.detail-table__item-remarks {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.detail-table__item-remarks input {
+    padding: 8px 12px;
+    width: 120%;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+}
+
+.detail-table__row-alert td{
+    padding-left: 320px;
+    color: #FF0000;
+}
+
+.form-button {
+    margin-top: 16px;
+    display: flex;
+    justify-content: end;
+}
+
+.form-button span {
+    font-size: 18px;
+    font-weight: 800;
+    color: #FF0000;
+    opacity: 0.5;
+}
+
+.form-button button {
+    width: 130px;
+    height: 50px;
+    border-radius: 5px;
+    background: #000000;
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+.form-button__only-status {
+    width: 130px;
+    height: 50px;
+    padding-top: 7px;
+    border-radius: 5px;
+    background: #696969;
+    color: #FFFFFF;
+    font-size: 22px;
+    text-align: center;
+}

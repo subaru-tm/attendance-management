@@ -1,0 +1,53 @@
+.card {
+    margin: 80px auto;
+
+    width: 60%;
+
+    @media (max-width: 850px) {
+        width: 100%;
+    }
+
+    font-weight: 700;
+    font-size: 16px;
+    color: #737373;
+}
+
+.card-header {
+    padding: 0 16px;
+    height: 44px;
+    border-left: 8px solid #000000;
+    color: #000000;
+    vertical-align: middle;
+}
+
+.card-header h1 {
+    font-size: 30px;
+}
+
+.list-table {
+    margin-top: 46px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.list-table__inner {
+    width: 100%;
+}
+
+.list-table__row:first-child {
+    height: 48px;
+    border-bottom: 3px solid #E1E1E1;
+}
+
+.list-table__row {
+    height: 42px;
+    border-bottom: 2px solid #E1E1E1;
+}
+
+.list-table__row th {
+    width: 80px;
+
+    @media (max-width: 850px) {
+        width: 16px;
+    }
+}
