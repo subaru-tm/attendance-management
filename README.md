@@ -33,3 +33,24 @@
 ## ER図
 ![image](https://github.com/user-attachments/assets/d88c1b1b-85cb-4845-b2ff-86bbd670c7fb)
 
+## その他
+- テストコードファイル名と機能の紐付き
+  - テストコード作成: php artisan make:test {テストコード名}(下記参照)
+  - テストコード実行: php artisan test
+  - 各機能に対するテストコード名（~/src/tests/Feature/配下に格納。IDは「テストケース一覧」を引用）
+    - ID: 1 認証機能（一般ユーザー）　　　 => RegisterTest
+    - ID: 2 ログイン機能（一般ユーザー）　 => LoginGeneralUserTest
+    - ID: 3 ログイン機能（管理者）　　　　 => LoginAdminUserTest
+    - ID: 4 日時取得機能　　　　　　　　　 => GetTimeTest
+    - ID: 5 ステータス確認機能　　　　　　 => StatusDisplayTest
+    - ID: 6 出勤機能　　　　　　　　　　　 => Test
+    - ID: 7 休憩機能　　　　　　　　　　　 => Test
+    - ID: 8 退勤機能　　　　　　　　　　　 => Test
+    - ID: 9 勤怠一覧情報取得機能（一般ユーザー） => Test
+    - ID:10 勤怠詳細情報取得機能（一般ユーザー） => Test
+    - ID:11 勤怠詳細情報修正機能（一般ユーザー） => Test
+    - ID:12 勤怠一覧情報取得機能（管理者）　　　 => Test
+    - ID:13 勤務詳細情報取得機能（管理者）　　　 => Test
+    - ID:14 ユーザー情報取得機能（管理者）　　　 => Test
+    - ID:15 勤怠情報修正機能（管理者）　　　　　 => Test
+    - ID:16 メール認証機能　　　　　　　　　　　 => Test
