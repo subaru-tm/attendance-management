@@ -43,9 +43,9 @@
     - ID: 3 ログイン機能（管理者）　　　　 => LoginAdminUserTest
     - ID: 4 日時取得機能　　　　　　　　　 => GetTimeTest
     - ID: 5 ステータス確認機能　　　　　　 => StatusDisplayTest
-    - ID: 6 出勤機能　　　　　　　　　　　 => Test
-    - ID: 7 休憩機能　　　　　　　　　　　 => Test
-    - ID: 8 退勤機能　　　　　　　　　　　 => Test
+    - ID: 6 出勤機能　　　　　　　　　　　 => AttendanceTest
+    - ID: 7 休憩機能　　　　　　　　　　　 => BreakTimeTest
+    - ID: 8 退勤機能　　　　　　　　　　　 => LeaveTest
     - ID: 9 勤怠一覧情報取得機能（一般ユーザー） => Test
     - ID:10 勤怠詳細情報取得機能（一般ユーザー） => Test
     - ID:11 勤怠詳細情報修正機能（一般ユーザー） => Test
