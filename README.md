@@ -46,9 +46,9 @@
     - ID: 6 出勤機能　　　　　　　　　　　 => AttendanceTest
     - ID: 7 休憩機能　　　　　　　　　　　 => BreakTimeTest
     - ID: 8 退勤機能　　　　　　　　　　　 => LeaveTest
-    - ID: 9 勤怠一覧情報取得機能（一般ユーザー） => Test
-    - ID:10 勤怠詳細情報取得機能（一般ユーザー） => Test
-    - ID:11 勤怠詳細情報修正機能（一般ユーザー） => Test
+    - ID: 9 勤怠一覧情報取得機能（一般ユーザー） => GetAttendanceListForGeneralTest
+    - ID:10 勤怠詳細情報取得機能（一般ユーザー） => GetAttendanceDetailForGeneralTest
+    - ID:11 勤怠詳細情報修正機能（一般ユーザー） => CorrectAttendanceDetailForGeneralTest
     - ID:12 勤怠一覧情報取得機能（管理者）　　　 => Test
     - ID:13 勤務詳細情報取得機能（管理者）　　　 => Test
     - ID:14 ユーザー情報取得機能（管理者）　　　 => Test
