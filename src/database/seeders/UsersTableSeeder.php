@@ -44,6 +44,7 @@ class UsersTableSeeder extends Seeder
         $param =[
             'name' => 'テストユーザー４',
             'email' => 'test4@test.com',
+            'email_verified_at' => Carbon::now(),
             'password' => Hash::make('test4pass'),
         ];
         DB::table('users')->insert($param);
@@ -51,7 +52,16 @@ class UsersTableSeeder extends Seeder
         $param =[
             'name' => 'テストユーザー５',
             'email' => 'test5@test.com',
+            'email_verified_at' => Carbon::now(),
             'password' => Hash::make('test5pass'),
+        ];
+        DB::table('users')->insert($param);
+
+        $param =[
+            'name' => 'テストユーザー６',
+            'email' => 'test6@test.com',
+            'email_verified_at' => Carbon::now(),
+            'password' => Hash::make('test6pass'),
         ];
         DB::table('users')->insert($param);
 

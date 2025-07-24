@@ -67,20 +67,19 @@ class AdminController extends Controller
     public function store(LoginRequest $request) {
         $credentials = $request->only('email', 'password');
         $user = User::where('email', $request->email)->first();
-        if ($user->is_admin) {
-            if (Auth::attempt($credentials)) {
-                if ($user && Hash::check($request->password, $user->password)) {
+        if (Auth::attempt($credentials)) {
+            if ($user && Hash::check($request->password, $user->password)) {
+                if ($user->is_admin) {
                     // 管理者としてログイン
                     $request->session()->regenerate();
-
                     return redirect()->route('admin.list');
+                } else {
+                    // 管理者用ログインでは、admin権限がない限り、一般ユーザーのパスワード合致してもログイン不可。
+                    // こちらでメッセージを付与。
+                    return redirect('/admin/login')->withErrors(['email' => 'ログイン情報が登録されていません']);
                 }
-            } else {
-                return redirect('/admin/login')->withErrors(['email' => 'ログイン情報が登録されていません']);
             }
         } else {
-            // 管理者用ログインでは、admin権限がない限り、一般ユーザーのパスワード合致してもログイン不可。
-            // こちらでメッセージを付与。
             return redirect('/admin/login')->withErrors(['email' => 'ログイン情報が登録されていません']);
         }
     }

@@ -104,11 +104,12 @@ class AttendanceController extends Controller
                     $total_break_time = Carbon::parse("1:0:0");
                     $break_time = BreakTime::Create([
                         'attendance_id' => $attendance_id,
-                        'branch_number' => $branch_number + 1,
+                        'branch_number' => '1',
                         'started_at' => Carbon::parse("12:0:0"),
                         'ended_at' => Carbon::parse("13:0:0"),
                     ]);
                 } else {
+                    // 休憩時間の入力がある場合、（case '1'の処理で）計算済の累積休憩時間を取得。
                     $entered_total = Attendance::find($attendance_id)->total_break_time;
                     $total_break_time = Carbon::parse($entered_total);
                 }
@@ -117,7 +118,7 @@ class AttendanceController extends Controller
                 $leaved_at = $now;
                 $net_attendance_time = $attendanced_at->diff($leaved_at);
 
-                // 休憩時間を控除。共にCarbonオブジェクトに変換した上で、勤務開始終了 ー 休憩時間を算出。
+                // 休憩時間を控除。共にCarbonオブジェクトに変換した上で、勤務開始・終了 ー 休憩時間を算出。
                 $carbon_attendance_time = Carbon::instance($now->copy()->add($net_attendance_time));
 
                 $break_time_dateInterval = Carbon::parse('0:0:0')->diff($total_break_time);

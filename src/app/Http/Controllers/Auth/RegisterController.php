@@ -66,10 +66,10 @@ class RegisterController extends Controller
         }
 
         event(new Registered($user = $creator->create($request->all())));
-
+        session()->put('unauthenticated_user', $user);
         $this->guard->login($user);
 
-        return redirect(route('home'));
+        return redirect()->route('verification.notice');
     }
 
 }

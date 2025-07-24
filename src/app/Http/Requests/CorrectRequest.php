@@ -25,7 +25,7 @@ class CorrectRequest extends FormRequest
     {
         return [
             'attendanced_at' => 'date_format:H:i|before:leaved_at',
-            'started_at.*' => 'date_format:H:i|after_or_equal:attendanced_at|before:ended_at[]',
+            'started_at.*' => 'date_format:H:i|after_or_equal:attendanced_at|before:leaved_at',
             'ended_at.*' => 'date_format:H:i|before_or_equal:leaved_at',
             'remarks' => 'required',
         ];
@@ -37,7 +37,7 @@ class CorrectRequest extends FormRequest
         return [
             'attendanced_at.before' => '出勤時間もしくは退勤時間が不適切な値です',
             'started_at.*.after_or_equal' => '休憩時間が勤務時間外です',
-            'started_at.*.before' => '休憩時間が不適切な値です',
+            'started_at.*.before' => '休憩時間が勤務時間外です',
             'ended_at.*.before_or_equal' => '休憩時間が勤務時間外です',
             'remarks.required' => '備考を記入してください'
         ];

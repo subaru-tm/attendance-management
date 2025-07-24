@@ -21,7 +21,7 @@ class CorrectBreakTime extends Model
     }
 
     public function scopeApplicationId($query, $application_id) {
-        if (!empty($attendance_id)) {
+        if (!empty($application_id)) {
             $query->where('application_id', $application_id);
         }
     }

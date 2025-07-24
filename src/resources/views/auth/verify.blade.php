@@ -24,6 +24,7 @@
 
     <!-- Styles -->
 </head>
+<?php use Illuminate\Support\Facades\Auth; ?>
 <body>
     <header class="header">
         <div class="header__inner">
@@ -47,6 +48,22 @@
                             @endif
 
                             {{ __('メール認証を完了してください。') }}
+
+                            <?php
+                            $user = Auth::user();
+                            $verificationUrl = URL::temporarySignedRoute(
+                                'verification.verify',
+                                now()->addMinutes(config('auth.verification.expire', 60)),
+                                [
+                                    'id' => $user->getKey(),
+                                    'hash' => sha1($user->getEmailForVerification()),]
+                            );
+                            ?>
+
+                            <div class="verification-url">
+                                <a href="{{ $verificationUrl }}">認証はこちらから</a>
+                            </div>
+
 
                             <form class="d-inline" method="POST" action="{{ route('verification.send') }}">
                                 @csrf

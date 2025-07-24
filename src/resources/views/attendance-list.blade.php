@@ -23,7 +23,7 @@
         method="get">
             @csrf
             <div class="card-month">
-                <button type="submit" name="month" value="{{ $oneMonthAgo }}">
+                <button class="one_month_ago_link" type="submit" name="month" value="{{ $oneMonthAgo }}">
                     <p class="month__change-arrow">←</p>
                     <p class="month__change-label">前月</p>
                 </button>
@@ -33,7 +33,7 @@
                     <div class="this_month__display-format">{{ $this_month_display }}</div>
                 </div>
 
-                <button type="submit" name="month" value="{{ $oneMonthLater }}">
+                <button class="one_month_Later_link" type="submit" name="month" value="{{ $oneMonthLater }}">
                     <p class="month__change-label">翌月</p>
                     <p class="month__change-arrow">→</p>
                 </button>

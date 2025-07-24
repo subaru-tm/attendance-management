@@ -15,7 +15,6 @@ class AttendanceListController extends Controller
         $user_id = Auth::id();
         $user = User::find($user_id);
 
-
         // 前月、翌月の指定があった場合は、その月を当月として設定。
         if ( isset($request['month']) )
         {
