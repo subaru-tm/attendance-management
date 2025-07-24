@@ -14,11 +14,15 @@
     - php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
   - composer require laravel/ui // メール認証のためlaravel/uiをインストール
     - php artisan ui bootstrap --auth
-  - composer require --dev laravel/dusk // laravel duskのインストール
   - php artisan storage:link // シンボリックリンク作成(viewヘッダ画像等のため)
 
 ## 開発環境
--  : http://localhost/
+- 勤怠登録画面: http://localhost/attendance
+- phpMyAdmin : http://localhost:8080
+- 会員登録画面: http://localhost/register
+- ログイン画面
+  - 一般ユーザー : http://localhost/login
+  - 管理者      : http://localhost/admin/login
 
 
 ## 使用技術(実行環境)
@@ -34,6 +38,11 @@
 ![image](https://github.com/user-attachments/assets/d88c1b1b-85cb-4845-b2ff-86bbd670c7fb)
 
 ## その他
+- 応用要件
+  - FN011 メールを用いた認証機能    : 実装済。mailtrapにて実装しています
+  - FN012 認証メール再送機能        : 実装済。
+  - FN033 申請詳細表示機能(承認待ち) : 「承認待ち」の申請詳細では、修正不可・メッセージ表示を実装しています
+  - FN045 CSV出力機能              : 実装済。
 - テストコードファイル名と機能の紐付き
   - テストコード作成: php artisan make:test {テストコード名}(下記参照)
   - テストコード実行: php artisan test
