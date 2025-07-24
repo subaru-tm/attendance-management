@@ -35,7 +35,7 @@
 - laravel/dusk 6.25
 
 ## ER図
-![image](https://github.com/user-attachments/assets/d88c1b1b-85cb-4845-b2ff-86bbd670c7fb)
+<img width="1694" height="1206" alt="image" src="https://github.com/user-attachments/assets/f5dd2c9a-16ee-4862-b72d-c2c36130cf32" />
 
 ## その他
 - 応用要件
