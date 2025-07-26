@@ -15,7 +15,16 @@
   - composer require laravel/ui // メール認証のためlaravel/uiをインストール
     - php artisan ui bootstrap --auth
   - php artisan storage:link // シンボリックリンク作成(viewヘッダ画像等のため)
-
+  - php artisan migrate
+  - php artisan db:seed
+    - シーダー作成のユーザーログイン情報（メアド / パスワード)
+      - test1@test.com / test1pass // 一般ユーザー。メール認証済。
+      - test2@test.com / test2pass // 同上
+      - test3@test.com / test3pass // 管理者ユーザー。メール認証済。
+      - test4@test.com / test4pass // 一般ユーザー。メール認証済。
+      - test5@test.com / test5pass // 同上
+      - test6@test.com / test6pass // 同上
+              
 ## 開発環境
 - 勤怠登録画面: http://localhost/attendance
 - phpMyAdmin : http://localhost:8080
